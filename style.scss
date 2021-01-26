@@ -1,3 +1,5 @@
+@import "./_variables.scss";
+
 .card_container {
   font-family: verdana;
   margin: 0;
@@ -15,17 +17,20 @@
   transition: 0.3s;
   width: 15rem;
   border-radius: 0.5rem 0.5rem 0 0;
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     // cursor: cell;
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
   }
 }
 
-.card img {
-  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-  filter: grayscale(100%);
+.card_banner_img {
   border-radius: 0.5rem 0.5rem 0 0;
   max-width: 100%;
+  transition: 0.3s;
 }
 
 .content_container {
@@ -38,14 +43,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -175%);
-  // transform: translate(-2.5rem, -8rem);
   z-index: 2;
 }
 .card_heading_img_container img {
   border-radius: 100%;
   max-height: 100%;
-  -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
-  filter: grayscale(0%);
 }
 .card_heading_text_container div {
   font-size: 1.5rem;
@@ -67,11 +69,11 @@
   padding: 2rem;
 }
 .card_stats_item div {
-  color: blue;
+  color: $blue;
   font-size: 1rem;
 }
 .card_stats_item span {
-  color: #333;
+  color: $gray;
   opacity: 0.5;
   font-size: 0.7rem;
 }
@@ -80,8 +82,8 @@
   padding: 0.5rem;
 }
 .card_info button {
-  color: #fff;
-  background-color: blue;
+  color: $white;
+  background-color: $blue;
   width: 6rem;
   height: 2rem;
   border: 1px solid transparent;
@@ -95,5 +97,5 @@
   font-size: 0.7rem;
   font-style: italic;
   opacity: 0.7;
-  color: #333;
+  color: $gray;
 }
