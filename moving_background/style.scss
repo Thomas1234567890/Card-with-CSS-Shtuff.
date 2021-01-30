@@ -83,7 +83,14 @@ body {
     font-size: 0.7rem;
   }
 
+  & button,
+  &button:hover,
+  & button:active {
+    outline: none;
+  }
+
   & .card_call_to_action button {
+    outline: none;
     background-color: #fff;
     border: 1px solid transparent;
     box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem $shadow_black;
